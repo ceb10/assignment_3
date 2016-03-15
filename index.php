@@ -1,0 +1,439 @@
+<?php
+    include('includes/dbconnect.php');
+    ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Assignment 3</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/_bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><i class="glyphicon glyphicon-home"></i> Double Deuce</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="#specials">Specials</a>
+                    </li>  
+                    <li>
+                        <a class="page-scroll" href="#gallery">Gallery</a>
+                    </li> 
+                     <li>
+                        <a class="page-scroll" href="#register">Register</a>
+                    </li>
+     
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li> 
+                   
+                </ul>
+                 
+      <ul class="nav navbar-nav navbar-right">
+        <li><p class="navbar-text">Already have an account?</p></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+			<ul id="login-dp" class="dropdown-menu">
+				<li>
+					 <div class="row">
+							<div class="col-md-12">
+								Login via
+								<div class="social-buttons">
+									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+								</div>
+                                or
+								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
+											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword2">Password</label>
+											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+										</div>
+										<div class="form-group">
+											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+										</div>
+										<div class="checkbox">
+											 <label>
+											 <input type="checkbox"> keep me logged-in
+											 </label>
+										</div>
+								 </form>
+            </div>
+                        
+ 
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+     <!--Usage Instructions: Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.-->
+    
+    
+    
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+<!--1st Additional Bootstrap Compoment-->
+            <div class="jumbotron">
+                <div class="container">
+                <h1>Double Deuce</h1>
+                </div>
+            </div>
+<!--End of 1st Additional Bootstrap Compoment-->
+            <!--2nd Additional Bootstrap Compoment-->
+   <div align="center" id="vid" class="embed-responsive embed-responsive-16by9">
+    <video autoplay poster="img/beer.png" class="embed-responsive-item">
+        <source src="Beachfront%20B-Roll%20Beer%20Pour%20Free%20to%20Use%20HD%20Stock%20Video%20Footage.mp4" type=video/mp4>
+    </video>
+</div>       
+<!--End of 2nd Additional Bootstrap Compoment-->
+        </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Double Dueces</h1>
+          <br/>
+<p>Cillum concursionibus admodum nisi appellat. Culpa senserit e irure aute eu qui quem voluptate instituendarum, mandaremus de nulla, litteris exercitation eu laboris ab qui labore ex noster se in noster pariatur quibusdam, qui enim labore de cupidatat ex velit quibusdam admodum. Si de quem deserunt, nam officia tractavissent de esse an singulis ut dolor, est labore commodo voluptate. Do fore praetermissum quo ingeniis ne irure tempor. Aute litteris in cohaerescant. Eu quae eruditionem, duis reprehenderit commodo aliqua quibusdam.</p>
+                    
+               <br/>     
+<h2 id="left">Demographics</h2>
+                    <br/>
+    <div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" style="width:60%">
+    60% Young Adults
+  </div>
+  <div class="progress-bar progress-bar-warning" role="progressbar" style="width:30%">
+    35% Middle Aged Adults
+  </div>
+  <div class="progress-bar progress-bar-danger" role="progressbar" style="width:10%">
+    5% Seniors
+  </div>
+</div>
+<br/>
+<h2 id="left">Why Come to Double Dueces</h2>
+<p>Expetendis qui quibusdam. Enim hic possumus o legam. Eiusmod domesticarum e nostrud, tamen te ita magna pariatur, varias ingeniis te commodo a nostrud aute singulis laboris, quae eiusmod comprehenderit qui nam ipsum cillum ita incididunt a consequat a laborum, appellat varias aliquip laboris. Doctrina quae laborum ad te fore senserit quamquam. Ubi ea magna cernantur aut noster ullamco voluptatibus, o in tamen mentitum o deserunt hic cernantur. Noster cernantur officia, an in relinqueret ex magna admodum singulis, voluptate do quem mandaremus. Nisi ut arbitror eu eram.</p>
+    <br/>
+
+</div>
+</div>
+</div>
+</section>
+
+
+    
+    
+    <!-- Specials Section -->
+    <section id="specials" class="specials-section">
+        
+        <div class="container">
+            <div class="row">
+                
+               <h1>Drink Specials</h1>
+                   
+    <table class="drinks" >
+          
+    <thead>
+        <tr>
+            <th><i class="glyphicon glyphicon-remove"></i> Monday</th>
+            <th><i class="glyphicon glyphicon-glass"></i> Tuesday</th>
+            <th><i class="glyphicon glyphicon-glass"></i> Wednesday</th>
+           
+        </tr>
+        </thead>
+    
+        <tbody>
+        <td>No Specials</td>
+            <td>$2 Shots <br/>10pm &#45; 12am</td>
+            <td>$1 Everything <br/>9pm &#45; 12am</td>
+        </tbody>
+        <thead>
+        <tr>
+            
+            <th><i class="glyphicon glyphicon-glass"></i> Thursday</th>
+            <th><i class="glyphicon glyphicon-glass"></i> Friday</th>
+            <th><i class="glyphicon glyphicon-glass"></i> Saturday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td>$2 Small Pitches of any Draft Beer <br/>All Day</td>
+            <td>Quarter Drafts and $2 Mixed Drinks <br/>10pm &#45; 12am </td>
+            <td>$1 Wells and Student Discount 20% <br/>9pm &#45; 12am</td>
+        </tr>
+    
+      
+    </tbody>
+</table>
+                    </div>
+                
+            </div>
+     
+    
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+        
+    <h1>Gallery</h1>
+    <div class="col-md-4">
+
+        <a href="img/bar1.jpg" data-title="Top-Shelf Drinks" data-toggle="lightbox"  data-gallery="mygallery" data-parent=".gallery-parent" title="Top-Shelf Drinks" data-hover="Tooltip"><img src="img/bar1.jpg" class="img-thumbnail" data-toggle="tooltip"></a>
+
+    </div>
+    <div class="col-md-4">
+       
+        <a href="img/bar2.jpg" data-title="Drinking Area" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Drinking Area"><img src="img/bar2.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+       
+        <a href="img/bar9.jpg" data-title="Martini" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Martini"><img src="img/bar9.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+        
+        <a href="img/bar4.jpg" data-title="Mojito" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Mojito"><img src="img/bar4.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+       
+        <a href="img/bar5.jpg" data-title="Main Bar" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Main Bar"><img src="img/bar5.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+        
+        <a href="img/bar6.jpg" data-title="Cheers!" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Cheers!"><img src="img/bar6.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+       
+        <a href="img/bar7.jpg" data-title="Morning Brunch" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Morning Brunch"><img src="img/bar7.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+      
+        <a href="img/bar8.jpg" data-title="Snack Time" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Snack Time"><img src="img/bar8.jpg" class="img-thumbnail"></a>
+    </div>
+    <div class="col-md-4">
+       
+        <a href="img/bar3.jpg" data-title="Weizen" data-toggle="lightbox" data-gallery="mygallery" data-parent=".gallery-parent" title="Weizen"><img src="img/bar3.jpg" class="img-thumbnail"></a>
+       
+    </div>
+
+
+</div>
+    </section>
+    
+    
+     <!-- Register Section -->
+    <section id="register" class="register-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Join the Pint Club and Become apart of our Family</h1>
+                    <form class="form-horizontal" action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Every Monday at the Double Duece is our Pint Club Night. Our valued Pint club members enjoy their First beer, of their choice, on US!! </legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder=" DoubleDuece" class="input-xlarge"  >
+        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder=" " class="input-xlarge">
+        <p class="help-block">Please provide your E-mail</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+        <p class="help-block">Password should be at least 4 characters</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+      <div class="controls">
+        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+        <p class="help-block">Please confirm password</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Register</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      Thank you! You Are now a Member of this family!
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </fieldset>
+</form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" id="contact">
+                <h1><u>Contact Us</u></h1>
+                <ul>
+                    <li><i class="glyphicon glyphicon-earphone"></i> Phone: 610-555-5555</li>
+                    <li><i class="glyphicon glyphicon-envelope"></i> Email: Double Deuce</li>
+                    <li>Address: Williamsport PA, 17701</li>
+                </ul>
+
+                <h1><u>Social Media</u></h1>
+
+                <ul>
+                    <li>Facebook: Double Deuce</li>
+                    <li>Twitter: @Double_Duece</li>
+                    <li>Instagram: Double_Duece</li>
+                    <li>Pinterest: Double Duece</li>
+
+
+
+                </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+    </section>
+       
+    
+    
+    
+    <footer>
+     <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                      <ul>
+                    <li ><a class="page-scroll" href="#page-top">Home</a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#specials">Specials</a></li>
+                    <li> <a class="page-scroll" href="#gallery">Gallery</a></li>
+                    <li><a class="page-scroll" href="#contact">Contact</a></li>
+                
+                </ul>
+                </div>
+        
+                <div class="col-md-6"><p> Copyright &copy; 2016, All Right Reserved</p></div>
+            </div>
+        </div>
+    
+    
+    </footer>
+    
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     
+   
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script> 
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+    <!--content delivery network-->
+    <script src="js/ekko-lightbox.js"></script>
+     <script>$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+}); 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+    </script>
+    
+        <!-- tooltips -->
+
+    
+    
+</body>
+
+</html>
