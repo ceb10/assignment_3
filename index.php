@@ -1,6 +1,7 @@
 <?php
-    include('includes/dbconnect.php');
-    ?>
+session_start();
+    include('includes/dbconnect.php');    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,9 +60,7 @@
                     <li>
                         <a class="page-scroll" href="#gallery">Gallery</a>
                     </li> 
-                     <li>
-                        <a class="page-scroll" href="#register">Register</a>
-                    </li>
+                     
      
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -70,37 +69,45 @@
                 </ul>
                  
       <ul class="nav navbar-nav navbar-right">
-        <li><p class="navbar-text">Already have an account?</p></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-			<ul id="login-dp" class="dropdown-menu">
+        <li><p class="navbar-text"><?php if(isset($_SESSION['email'])){echo "Welcome ".$_SESSION['email'];}?> </p></li> <?php if(isset($_SESSION['email'])==0){echo "
+          <li>
+                        <a class=\"page-scroll\" href=\"#register\">Dont have an account? Register today!</a>
+                    </li>
+        <li class=\"dropdown\">
+         <a href=\"#\" class= \"dropdown-toggle\" data-toggle=\"dropdown\"><b>Login</b> <span class=\"caret\"></span></a>
+           
+			<ul id=\"login-dp\" class=\"dropdown-menu\">
 				<li>
-					 <div class="row">
-							<div class="col-md-12">
+					 <div class=\"row\">
+							<div class=\"col-md-12\">
+<!--
 								Login via
-								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+								<div class=\"social-buttons\">
+									<a href=\"#\" class=\"btn btn-fb\"><i class=\"fa fa-facebook\"></i> Facebook</a>
+									<a href=\"#\" class=\"btn btn-tw\"><i class=\"fa fa-twitter\"></i> Twitter</a>
 								</div>
                                 or
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+-->
+								 <form class=\"form\" role=\"form\" method=\"post\" action=\"includes/login.php\" accept-charset=\"UTF-8\" id=\"login-nav\" target=\"_self\">
+										<div class=\"form-group\">
+											 <label class=\"sr-only\" for=\"email\">Email address</label>
+											 <input type=\"email\" name=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Email address\" required>
 										</div>
-										<div class="form-group">
-											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+										<div class=\"form-group\">
+											 <label class=\"sr-only\" for=\"password\">Password</label>
+											 <input type=\"password\" name=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\" required>
+<!--                                             <div class=\"help-block text-right\"><a href=\"\">Forget the password ?</a></div>-->
 										</div>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+										<div class=\"form-group\">
+											 <button type=\"submit\" name=\"submit_login\" class=\"btn btn-primary btn-block\">Sign in</button>
 										</div>
-										<div class="checkbox">
+<!--
+										<div class=\"checkbox\">
 											 <label>
-											 <input type="checkbox"> keep me logged-in
+											 <input type=\"checkbox\"> keep me logged-in
 											 </label>
 										</div>
+-->
 								 </form>
             </div>
                         
@@ -108,6 +115,10 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+                </li>
+            </ul>";}?>
+          <?php if(isset($_SESSION['email'])) {echo "<button type=\"submit\"  name=\"submit_logout\" class= \"btn \"><a href=\"includes/logout.php\">Logout</a></button>";}
+    ?>
     </nav>
 
      <!--Usage Instructions: Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.-->
@@ -277,64 +288,50 @@
     
     
      <!-- Register Section -->
-    <section id="register" class="register-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+                <?php if(isset($_SESSION['email'])==0){echo "
+    <section id=\"register\" class=\"register-section\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-lg-12\">
                     <h1>Join the Pint Club and Become apart of our Family</h1>
-                    <form class="form-horizontal" action='' method="POST">
+                    <form class=\"form-horizontal\" action=\"includes/register.php\"' method=\"POST\">
   <fieldset>
-    <div id="legend">
-      <legend class="">Every Monday at the Double Duece is our Pint Club Night. Our valued Pint club members enjoy their First beer, of their choice, on US!! </legend>
+    <div id=\"legend\">
+      <legend class=\"\">Every Monday at the Double Duece is our Pint Club Night. Our valued Pint club members enjoy their First beer, of their choice, on US!! </legend>
     </div>
-    <div class="control-group">
+    <div class=\"control-group\">
       <!-- Username -->
-      <label class="control-label"  for="username">Username</label>
-      <div class="controls">
-        <input type="text" id="username" name="username" placeholder=" DoubleDuece" class="input-xlarge"  >
-        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+      <label class=\"control-label\"  for=\"username\">Username</label>
+      <div class=\"controls\">
+        <input type=\"text\" id=\"username\" name=\"username\" placeholder=\" DoubleDuece\" class=\"input-xlarge\"  >
       </div>
     </div>
  
-    <div class="control-group">
+    <div class=\"control-group\">
       <!-- E-mail -->
-      <label class="control-label" for="email">E-mail</label>
-      <div class="controls">
-        <input type="text" id="email" name="email" placeholder=" " class="input-xlarge">
-        <p class="help-block">Please provide your E-mail</p>
+      <label class=\"control-label\" for=\"email\">E-mail</label>
+      <div class=\"controls\">
+        <input type=\"text\" id=\"email\" name=\"email\" placeholder=\" \" class=\"input-xlarge\">
+        <p class=\"help-block\">Please provide your E-mail</p>
       </div>
     </div>
  
-    <div class="control-group">
+    <div class=\"control-group\">
       <!-- Password-->
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-        <p class="help-block">Password should be at least 4 characters</p>
+      <label class=\"control-label\" for=\"password\">Password</label>
+      <div class=\"controls\">
+        <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"\" class=\"input-xlarge\">
+        <p class=\"help-block\">Password should be at least 4 characters</p>
       </div>
     </div>
  
-    <div class="control-group">
-      <!-- Password -->
-      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-      <div class="controls">
-        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-        <p class="help-block">Please confirm password</p>
-      </div>
-    </div>
- 
-    <div class="control-group">
+    <div class=\"control-group\">
+     
       <!-- Button -->
-      <div class="controls">
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Register</button>
+      <div class=\"controls\">
+       <button type=\"submit\" name =\"submit_register\" class=\"btn btn-warning\" <a href=\"includes/register.php\">Register</a></button>
 
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      Thank you! You Are now a Member of this family!
-    </div>
-  </div>
-</div>
+
       </div>
     </div>
   </fieldset>
@@ -345,7 +342,7 @@
             </div>
         </div>
     </section>
-    
+    ";}?>
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
     <div class="container">
